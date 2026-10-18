@@ -1,0 +1,18 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# 脚本是打包产物：长行是有意的，不要自动换行/格式化
+[*.user.js]
+max_line_length = off
+indent_size = unset
+indent_style = unset
+
+[*.md]
+trim_trailing_whitespace = false

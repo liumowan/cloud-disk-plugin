@@ -1,0 +1,37 @@
+name: check
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 语法校验（node --check）
+        run: node --check cloud-disk-plugin-tamper-monkey.user.js
+
+      - name: 检查版本号一致性
+        run: |
+          HEADER=$(grep -oP '(?<=// @version      )\S+' cloud-disk-plugin-tamper-monkey.user.js)
+          LOCAL=$(grep -oP '(?<=const localVersion = ")[0-9.]+' cloud-disk-plugin-tamper-monkey.user.js)
+          PKG=$(node -p "require('./package.json').version")
+          echo "header=$HEADER local=$LOCAL package=$PKG"
+          if [ "$HEADER" != "$LOCAL" ] || [ "$HEADER" != "$PKG" ]; then
+            echo "::error::版本号不一致：@version=$HEADER localVersion=$LOCAL package.json=$PKG"
+            exit 1
+          fi
+
+      - name: 安全检查（禁止提交 HAR / Cookie）
+        run: |
+          if git ls-files | grep -Ei '\.har$|cookie'; then
+            echo "::error::仓库里不应该有 .har 或 cookie 文件（含登录态）"
+            exit 1
+          fi

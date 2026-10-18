@@ -1,0 +1,8 @@
+# 统一换行符，避免 Windows 提交后整个文件 diff 爆炸
+* text=auto eol=lf
+
+# 脚本是打包产物，GitHub 上按 JS 高亮，且不做 diff 的按行优化
+*.user.js linguist-language=JavaScript linguist-detectable=true
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf

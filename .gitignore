@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------
+# ⚠️ 千万不要提交抓包文件 / Cookie / 登录态
+# HAR 里带完整的 Cookie 和 token，一旦推上去等于把网盘账号交出去
+# ---------------------------------------------------------------
+*.har
+*.har.gz
+*.HAR
+cookies*.txt
+*cookie*
+*.token
+.env
+.env.*
+
+# 调试与临时文件
+analyze_har*.js
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 依赖与构建
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo

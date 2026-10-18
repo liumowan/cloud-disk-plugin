@@ -1,0 +1,29 @@
+{
+  "name": "cloud-disk-plugin-tamper-monkey",
+  "version": "1.4.4",
+  "private": true,
+  "description": "网盘文件批量重命名油猴脚本，支持百度网盘、阿里云盘、夸克网盘、PikPak",
+  "keywords": [
+    "tampermonkey",
+    "userscript",
+    "baidu-pan",
+    "aliyundrive",
+    "quark",
+    "pikpak",
+    "batch-rename"
+  ],
+  "homepage": "https://github.com/afeireal/cloud-disk-plugin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeireal/cloud-disk-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afeireal/cloud-disk-plugin/issues"
+  },
+  "license": "MIT",
+  "author": "afeireal",
+  "scripts": {
+    "check": "node --check cloud-disk-plugin-tamper-monkey.user.js",
+    "bump": "node scripts/bump-version.mjs"
+  }
+}
