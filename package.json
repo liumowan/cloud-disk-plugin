@@ -12,13 +12,13 @@
     "pikpak",
     "batch-rename"
   ],
-  "homepage": "https://github.com/afeireal/cloud-disk-plugin#readme",
+  "homepage": "https://github.com/liumowan/cloud-disk-plugin#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afeireal/cloud-disk-plugin.git"
+    "url": "git+https://github.com/liumowan/cloud-disk-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/afeireal/cloud-disk-plugin/issues"
+    "url": "https://github.com/liumowan/cloud-disk-plugin/issues"
   },
   "license": "MIT",
   "author": "afeireal",

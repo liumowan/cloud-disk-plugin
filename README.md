@@ -48,12 +48,12 @@
 先装好浏览器扩展 [Tampermonkey](https://www.tampermonkey.net/)（Chrome / Edge / Firefox 均可），然后点下面的链接：
 
 ```
-https://raw.githubusercontent.com/afeireal/cloud-disk-plugin/main/cloud-disk-plugin-tamper-monkey.user.js
+https://raw.githubusercontent.com/liumowan/cloud-disk-plugin/main/cloud-disk-plugin-tamper-monkey.user.js
 ```
 
 > 访问 `raw.githubusercontent.com` 困难时，可用 jsDelivr 镜像：
 > ```
-> https://cdn.jsdelivr.net/gh/afeireal/cloud-disk-plugin@main/cloud-disk-plugin-tamper-monkey.user.js
+> https://cdn.jsdelivr.net/gh/liumowan/cloud-disk-plugin@main/cloud-disk-plugin-tamper-monkey.user.js
 > ```
 
 Tampermonkey 会弹出安装页，点「安装」即可。
@@ -220,6 +220,12 @@ npm run bump 1.4.5
 提交前请确认 **没有把 `.har`、Cookie、抓包文件带进仓库**（`.gitignore` 已拦截，CI 也会检查）。
 
 ---
+
+## 致谢
+
+本项目的**原始版本**来自 [afeireal/cloud-disk-plugin](https://github.com/afeireal/cloud-disk-plugin)。
+本仓库在其基础上做了大量修复与增强（1.4.0 → 1.4.4，详见 [CHANGELOG](./CHANGELOG.md)）：
+接口纠错、面板异常隔离、全盘加载、按目录判重、连续作业、版本自检等。
 
 ## 免责声明
 
