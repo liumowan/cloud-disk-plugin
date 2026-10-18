@@ -4,6 +4,7 @@
 > 主打场景：**批量删掉文件名里的广告词、网址、水印，并支持整个网盘一次性处理。**
 
 <p align="left">
+  <a href="https://github.com/liumowan/cloud-disk-plugin/releases/latest"><img alt="release" src="https://img.shields.io/github/v/release/liumowan/cloud-disk-plugin?label=release"></a>
   <img alt="version" src="https://img.shields.io/badge/version-1.4.4-blue.svg">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-green.svg">
   <img alt="platform" src="https://img.shields.io/badge/Tampermonkey-supported-orange.svg">
@@ -58,7 +59,19 @@ https://raw.githubusercontent.com/liumowan/cloud-disk-plugin/main/cloud-disk-plu
 
 Tampermonkey 会弹出安装页，点「安装」即可。
 
-### 方式二：手动安装
+### 方式二：从 Releases 下载
+
+👉 **[**⬇ 前往 Releases 下载最新版 **](https://github.com/liumowan/cloud-disk-plugin/releases/latest)**
+
+每个版本都会在 Release 里附上 `cloud-disk-plugin-tamper-monkey.user.js` 文件，适合：
+
+- 想留一份本地备份
+- 需要装回**旧版本**（比如新版某功能不合用）
+- 不想访问 raw.githubusercontent.com
+
+下载后按「方式三」手动安装即可。
+
+### 方式三：手动安装
 
 1. 下载 [`cloud-disk-plugin-tamper-monkey.user.js`](./cloud-disk-plugin-tamper-monkey.user.js)
 2. 打开 Tampermonkey → **管理面板** → **+**（新建脚本）
@@ -193,9 +206,13 @@ Tampermonkey 会弹出安装页，点「安装」即可。
 ├── CHANGELOG.md                              # 完整修改历史
 ├── README.md
 ├── LICENSE                                   # MIT
+├── CONTRIBUTING.md                           # 贡献指南
+├── RELEASING.md                              # 发布流程（附 Release 附件说明）
 ├── package.json
 ├── scripts/
 │   └── bump-version.mjs                      # 一键同步三处版本号
+├── docs/
+│   └── release-notes-v1.4.4.md               # Release 说明模板
 └── .github/workflows/check.yml               # CI：语法校验 + 版本一致性
 ```
 
