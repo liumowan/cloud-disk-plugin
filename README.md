@@ -61,7 +61,13 @@ Tampermonkey 会弹出安装页，点「安装」即可。
 
 ### 方式二：从 Releases 下载
 
-👉 **[**⬇ 前往 Releases 下载最新版 **](https://github.com/liumowan/cloud-disk-plugin/releases/latest)**
+👉 **[⬇ 前往 Releases 下载最新版](https://github.com/liumowan/cloud-disk-plugin/releases/latest)**
+
+直接下载最新版附件的固定链接（永远指向最新 Release）：
+
+```
+https://github.com/liumowan/cloud-disk-plugin/releases/latest/download/cloud-disk-plugin-tamper-monkey.user.js
+```
 
 每个版本都会在 Release 里附上 `cloud-disk-plugin-tamper-monkey.user.js` 文件，适合：
 

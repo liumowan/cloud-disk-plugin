@@ -50,7 +50,24 @@ git push && git push --tags
 
 推送 tag 后 GitHub 不会自动建 Release，需要手动创建（也可以在推送前直接建，选已有 tag）。
 
-**步骤：**
+### 方式 A：一行命令（推荐）
+
+本机已安装 GitHub CLI（`gh`），登录一次之后永久可用：
+
+```bash
+# 先复制一份发布说明，改成新版本内容
+cp docs/release-notes-v1.4.4.md docs/release-notes-v1.4.5.md
+
+gh release create v1.4.5 "cloud-disk-plugin-tamper-monkey.user.js" \
+  --title "v1.4.5 — 一句话说明" \
+  --notes-file docs/release-notes-v1.4.5.md \
+  --latest
+```
+
+> `gh` 位置：`%LOCALAPPDATA%\Programs\gh\bin\gh.exe`，已写入用户 PATH。
+> 未登录时执行 `gh auth login`，选 GitHub.com → HTTPS → Login with a web browser。
+
+### 方式 B：网页操作
 
 1. 打开 https://github.com/liumowan/cloud-disk-plugin/releases/new
 2. **Choose a tag** → 选刚推的 `v1.4.5`
